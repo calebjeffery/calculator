@@ -2,6 +2,10 @@
 
 This project is a learning project based on the YouTube tutorial by Web Dev Simplified. The tutorial can be found at [https://youtu.be/j59qQ7YWLxw](https://youtu.be/j59qQ7YWLxw).
 
+## Self Reflection
+
+What I learnt from this project was how to do plain javascript as I was relying on jquery alot and found that relying on a javascript library means you need to keep all your projects up to date.
+
 ## Description
 
 The Calculator project is a simple web application that allows users to perform basic arithmetic calculations. It was built as a hands-on exercise to practice web development concepts, including HTML, CSS, and JavaScript.
