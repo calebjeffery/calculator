@@ -1,0 +1,116 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+}
+
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,1fr);
+}
+
+.calculator-grid > button{
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: rgba(255,255,255,0.75);
+    outline: none;
+    font-size: 2rem;
+}
+.calculator-grid > button:hover{
+    background-color: white
+}
+.span-two{
+    grid-column: span 2;
+}
+
+.calculator-output{
+    grid-column: 1 /-1;
+    background-color: rgba(0,0,0,0.75);
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.calculator-output .calulator-previous-operand{
+    font-size: 1.5rem;
+}
+.calculator-output .calulator-current-operand{
+    font-size: 2.5rem;
+}
+
+.calculator-output .calulator-REGISTER{
+    color:darksalmon;
+}
+.calulator-REGISTER::before, .calulator-REGISTER::after{
+  position: relative;
+  left: 110%;
+  top: 0%;
+  transform: translateY(-50%);
+  width: 1.25em;
+  text-align: center;
+  background-color: black;
+}
+.calulator-REGISTER::before{
+    content:'REGISTER'
+}
+
+.calculator-output .calulator-REGISTERA{
+    color:yellow;
+    align-self: flex-start;
+}
+.calculator-output .calulator-REGISTERB{
+    color:cyan;
+    align-self: flex-start;
+}
+.calculator-output .calulator-RESULT{
+    color:#00FF6C;
+}
+.calulator-RESULT::before, .calulator-RESULT::after{
+    position: relative;
+    left: 110%;
+    top: 0%;
+    transform: translateY(-50%);
+    width: 1.25em;
+    text-align: center;
+    background-color: black;
+  }
+.calulator-RESULT::before{
+    content:'RESULT'
+}
+.calculator-output .calulator-OPPERATION{
+    color:blueviolet;
+    align-self: flex-start;
+}
+.calulator-OPPERATION::before, .calulator-OPPERATION::after,.calulator-REGISTERA::before, .calulator-REGISTERA::after,.calulator-REGISTERB::before, .calulator-REGISTERB:after{
+    position: relative;
+    right: 110%;
+    top: 0%;
+    transform: translateY(50%);
+    width: 1.25em;
+    text-align: center;
+    background-color: black;
+  }
+.calulator-REGISTERA::after{
+    content:'REGISTERA'
+}
+.calulator-REGISTERB::after{
+    content:'REGISTERB'
+}
+.calulator-OPPERATION::after{
+    content:'OPPERATION'
+}
